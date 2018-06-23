@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.robert.schoolMgr.dao.CustInfoMapper">
+
+    <select id="getAllCustInfo" resultType="com.robert.schoolMgr.bean.CustInfo">
+        select id,name,mobile,max_amount investAmount,id_num idNum from tb_cust_info
+    </select>
+
+    <select id="getAllCustPageInfo" parameterType="java.util.Map" resultType="com.robert.schoolMgr.bean.CustInfo">
+    select id,name,mobile,max_amount investAmount,id_num idNum from tb_cust_info
+    where 1=1
+    <if test="custName!='' and custName!=null">
+      and name = #{custName}
+    </if>
+    limit #{startNo}, #{pageSize}
+    </select>
+
+    <select id="getAllCustInfoCount" resultType="java.lang.Integer">
+        select count(1) from tb_cust_info
+    </select>
+
+    <insert id="addCustInfo" parameterType="com.robert.schoolMgr.bean.CustInfo">
+      insert into tb_cust_info(name,mobile,comment) values(#{name},#{mobile},#{comment})
+    </insert>
+</mapper>
