@@ -4,11 +4,13 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
+<!DOCTYPE HTML>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <title>选题</title>
+        <script src="<%=basePath%>js/jquery-3.3.1.js"></script>
     </head>
-    <script src="/js/jquery-3.3.1.js"></script>
     <body>
     <!-- 内容主体区域 -->
     请输入您的手机号和姓名进行选题：<br>
@@ -18,7 +20,6 @@
     <button name="xuantiBtn" onclick="xuanti()">选题</button>
     </body>
     <script type="text/javascript">
-
         function xuanti(){
             var mobile = $('#mobile').val();
             var name = $('#name').val();

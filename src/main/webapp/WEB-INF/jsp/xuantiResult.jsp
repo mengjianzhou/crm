@@ -4,11 +4,13 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
+<!DOCTYPE HTML>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>选题结果</title>
+    <script src="<%=basePath%>js/jquery-3.3.1.js"></script>
 </head>
-<script src="/js/jquery-3.3.1.js"></script>
 <body>
     <table border="1">
         <tr>
@@ -26,7 +28,6 @@
     </table>
     <button onclick="clearAllXuanTiResult()">清除记录</button>
     <script type="text/javascript">
-
         function clearAllXuanTiResult(){
 
             $.ajax({
