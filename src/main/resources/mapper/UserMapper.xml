@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.robert.schoolMgr.dao.UserMapper">
+
+    <insert id="addXuantiInfo" parameterType="com.robert.schoolMgr.bean.XuanTiInfo">
+        INSERT INTO xuan_ti_info(mobile, name ,num)
+        VALUES(#{mobile}, #{name}, #{num})
+    </insert>
+
+    <select id="queryByMobile" parameterType="string" resultType="string">
+        select num from xuan_ti_info where mobile = #{mobile}
+    </select>
+
+    <select id="queryAllXuanTiResult" resultType="com.robert.schoolMgr.bean.XuanTiInfo">
+      select name, mobile, num from xuan_ti_info
+    </select>
+
+    <delete id="clearAllXuanTiResult">
+        delete from xuan_ti_info
+    </delete>
+</mapper>

@@ -14,4 +14,8 @@ public interface UserMapper {
     void addXuantiInfo(XuanTiInfo xuanTiInfo);
 
     String queryByMobile(String mobile);
+
+    List<XuanTiInfo> queryAllXuanTiResult();
+
+    void clearAllXuanTiResult();
 }
