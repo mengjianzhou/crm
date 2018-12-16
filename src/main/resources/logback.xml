@@ -6,6 +6,10 @@
         </encoder>
     </appender>
 
+    <appender name="com.robert.schoolMgr">
+
+    </appender>
+
     <root level="debug">
         <appender-ref ref="STDOUT" />
     </root>

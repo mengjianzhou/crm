@@ -1,6 +1,7 @@
 package com.robert.schoolMgr.dao;
 
 import com.robert.schoolMgr.bean.UserInfo;
+import com.robert.schoolMgr.bean.XuanTiInfo;
 
 import java.util.List;
 
@@ -10,8 +11,7 @@ import java.util.List;
  */
 public interface UserMapper {
 
-//    UserInfo selectUserInfo(Integer id);
-//
-//    List<UserInfo> queryUsers();
+    void addXuantiInfo(XuanTiInfo xuanTiInfo);
 
+    String queryByMobile(String mobile);
 }
