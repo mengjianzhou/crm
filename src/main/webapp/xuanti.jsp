@@ -42,7 +42,7 @@
         <div align="center">
             <table>
                 <tr class="t1">
-                    <td align="right" ><label style="font-size: 18px">手机号：</label></td>
+                    <td align="right" ><label style="font-size: 18px">学号：</label></td>
                     <td><input type="text" id="mobile" name="mobile" value="" class="layui-text" style="margin-bottom:5px;width:150px;height:30px"/></td>
                 </tr>
                 <tr class="t1">
@@ -62,7 +62,7 @@
             var mobile = $('#mobile').val();
             var name = $('#name').val();
             if(mobile==''||name==''||mobile.length==0||name.length==0){
-                alert("请输入手机号和姓名");
+                alert("请输入学号和姓名进行选题");
                 return;
             }
             $.ajax({
