@@ -1,6 +1,7 @@
 package com.robert.schoolMgr.controller;
 
 import com.alibaba.druid.util.StringUtils;
+import com.alibaba.fastjson.JSON;
 import com.robert.schoolMgr.bean.XuanTiInfo;
 import com.robert.schoolMgr.dao.UserMapper;
 import org.slf4j.Logger;
@@ -12,9 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 @Controller
 public class XuanTiController {
@@ -49,6 +48,20 @@ public class XuanTiController {
         List<XuanTiInfo> xuanTiInfoList = userMapper.queryAllXuanTiResult();
         mv.addObject("data", xuanTiInfoList);
         return mv;
+    }
+
+    @RequestMapping("getXuanTiResult")
+    @ResponseBody
+    public String getXuanTiResult(){
+        Map<String, Object> result = new HashMap<String, Object>();
+        List<XuanTiInfo> xuanTiInfoList = userMapper.queryAllXuanTiResult();
+        int count = xuanTiInfoList.size();
+        result.put("count", count);
+        result.put("data", xuanTiInfoList);
+        result.put("code",0);
+        result.put("msg", "");
+        String resultJson = JSON.toJSONString(result);
+        return resultJson;
     }
 
     @RequestMapping(value="clearAllXuanTiResult", method=RequestMethod.POST)
