@@ -9,6 +9,8 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>选题结果</title>
+    <link rel="stylesheet" href="<%=basePath%>css/layui.css">
+    <script src="<%=basePath%>js/layui.js"></script>
     <script src="<%=basePath%>js/jquery-3.3.1.js"></script>
 </head>
 <body>
