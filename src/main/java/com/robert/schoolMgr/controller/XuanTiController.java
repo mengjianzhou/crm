@@ -50,7 +50,7 @@ public class XuanTiController {
         return mv;
     }
 
-    @RequestMapping("getXuanTiResult")
+    @RequestMapping(value="getXuanTiResult",produces="text/html;charset=UTF-8")
     @ResponseBody
     public String getXuanTiResult(){
         Map<String, Object> result = new HashMap<String, Object>();
