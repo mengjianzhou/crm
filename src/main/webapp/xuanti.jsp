@@ -38,7 +38,7 @@
     <body >
     <div class="a1" >
         <!-- 内容主体区域 -->
-        <div style="text-align: center;font-family: Cambria;font-size: 20px">请输入您的手机号和姓名进行选题：</div><br>
+        <div style="text-align: center;font-family: Cambria;font-size: 20px">请输入您的学号和姓名进行选题：</div><br>
         <div align="center">
             <table>
                 <tr class="t1">

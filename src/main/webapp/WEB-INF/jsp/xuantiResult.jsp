@@ -14,7 +14,7 @@
 <body>
     <table border="1">
         <tr>
-            <td>姓名</td>
+            <td>学号</td>
             <td>手机号</td>
             <td>选题</td>
         </tr>

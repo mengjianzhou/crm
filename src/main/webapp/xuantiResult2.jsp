@@ -30,9 +30,9 @@
             ,url:'<%=basePath%>getXuanTiResult'
             ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
             ,cols: [[
-                {field:'name', width:80, title: 'ID', sort: true}
-                ,{field:'mobile', width:80, title: '用户名'}
-                ,{field:'num', width:80, title: '性别', sort: true}
+                {field:'name', width:80, title: '姓名', sort: true}
+                ,{field:'mobile', width:80, title: '学号'}
+                ,{field:'num', width:80, title: '选题编号', sort: true}
             ]]
         });
     });
